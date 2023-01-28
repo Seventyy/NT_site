@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 5</title>
+</head>
+<body style="background-color:darkslategrey">
+
+    <h2 style="color:aliceblue">Theoritical Part:</h2>
+
+    <h3 style="color:aliceblue">DNS system:</h3>
+
+    <h4 style="color:aliceblue"></h4>
+    <h4 style="color:aliceblue">
+    list of Top Level Domains</h4><p style="color:aliceblue">
+        All are included here: <a href="https://data.iana.org/TLD/tlds-alpha-by-domain.txt">here</a> <br>
+        Most important are: <br>
+        .com (commercial)<br>
+        .gov (government)<br>
+        .edu (educational)<br>
+        .net (network)<br>
+        .org (organization)<br>
+        .mil (military)<br>
+        .int (international)<br>
+        .biz (business)<br>
+        .info (information)<br>
+        .pro (professional)<br>
+        and country specific<br>
+    </p>
+    <h4 style="color:aliceblue">
+    Hierarhical structure of Domain Name System (DNS), Top Level Domains</h4><p style="color:aliceblue">
+        DNS uses a tree-like structure. At the top of the hierarchy is the root domain represented by a dot (.).
+        Below the root domain are the top-level domains such as above. These TLDs
+        contain information about second-level domains which are unique domain names registered by individuals
+        or organizations. Second-level domains can contain subdomains such as www, these are the third-level domains.
+    </p>
+    <h4 style="color:aliceblue">
+    DNS queries</h4><p style="color:aliceblue">
+        A DNS query is a request for ip adress of a website from a DNS server. DNS server checks its cashe to find the adress in question, if it's not found
+        i sends request to the root server. It in turn forwards request to the server responsible for that level of the domain. It then sends 
+        the package further to the authoritative name server, witch return the ip.
+    </p>
+    <h4 style="color:aliceblue">
+    DNS delegation</h4><p style="color:aliceblue">
+        DNS delegation is the process of assigning responsibility for a subdomain to another DNS server. It allows
+        for dividing a domain's DNS namespace into smaller, more manageable units.
+    </p>
+    <h4 style="color:aliceblue">
+    DNS record</h4><p style="color:aliceblue">
+        A DNS record is a set of information that is stored on a DNS server and used to map a domain name to an IP
+        address or other information. There are several types of DNS records, including A records, which map a
+        domain name to an IP address, MX records, which specify the mail servers for a domain, and CNAME records,
+        which create an alias for a domain name.
+    </p>
+    <h4 style="color:aliceblue">
+    DNS and reverse DNS</h4><p style="color:aliceblue">
+        Reverse DNS is the opposite process of DNS, it resolves an IP address to a name. It's used to 
+        associate a hostname with an IP address, in other words, it maps an IP address back to a domain name. It's 
+        mostly used for troubleshooting and for email delivery. 
+    </p>
+    <h4 style="color:aliceblue">
+    Authoritative answer non authoritative answer explanation</h4><p style="color:aliceblue">
+        Authoritative DNS answer is a response to a DNS query that comes from a server that is designated as an authoritative source, meaning it has
+        the most up-to-date and accurate information about the domain. A non-authoritative DNS may not be as accurate or up-to-date. 
+    </p>
+    <h4 style="color:aliceblue">
+    DNS resolver</h4><p style="color:aliceblue">
+        A DNS resolver is a server that is contated when trying to resolve a website name. It is most often controlled by internet service provider. 
+        It check it's local cashe first, if adress is not found, it forwards the request further.
+    </p>
+    <h4 style="color:aliceblue">
+    DNS cache</h4><p style="color:aliceblue">
+        A DNS cache, is a temporary storage area for DNS query results. It is used to speed up the process 
+        of resolving domain names to IP addresses. 
+    </p>
+    
+    <h3 style="color:aliceblue">DNS system:</h3>
+    <h4 style="color:aliceblue">
+    POP3</h4><p style="color:aliceblue">
+        POP3 (Post Office Protocol version 3) is a protocol for retrieving email messages from a mail server. POP3 downloads messages and deletes them
+        from the server, therefore it is best used for users who only need to check their email from one device. Some basic commands used in POP3 include:<br>
+            USER: specify the username for the email account.<br>
+            PASS: provide the password for the email account.<br>
+            STAT: retrieve the number of messages in the mailbox, along with the total size of all messages.<br>
+            LIST: retrieve a list of all messages in the mailbox, along with their size.<br>
+            RETR: retrieve a specific message from the mailbox.<br>
+            DELE: delete a specific message from the mailbox.<br>
+            QUIT: log out of the email account and terminate the POP3 session.        <br>
+    </p>
+    <h4 style="color:aliceblue">
+    IMAP</h4><p style="color:aliceblue">
+        IMAP (Internet Message Access Protocol) is a standard protocol for accessing and managing email messages on a remote mail server. It allows 
+        for synchronising folders and does not remove messages from the server. Messages are localy cashed insted of downloaded. It is better suited
+        for use on multiple divaces then POP3.<br>
+        The basic IMAP commands include:<br>
+            LOGIN: Used to authenticate the user with the mail server<br>
+            SELECT: Used to select a mailbox (such as Inbox or Sent Items) for further operations<br>
+            FETCH: Used to retrieve specific messages or parts of messages from the mailbox<br>
+            SEARCH: Used to search for messages matching certain criteria<br>
+            STORE: Used to modify flags or labels associated with messages<br>
+            COPY: Used to copy messages to another mailbox<br>
+            EXPUNGE: Used to permanently delete messages from the mailbox<br>
+            LOGOUT: Used to terminate the IMAP session<br>
+    </p>
+    <h4 style="color:aliceblue">
+    SMTP</h4><p style="color:aliceblue">
+    SMTP (Simple Mail Transfer Protocol) is a standard protocol for sending email messages over the internet. 
+    SMTP is a core protocol that enables the sending of email messages over the internet. It is typically used in conjunction 
+    with other protocols such as POP3 and IMAP to provide a complete email service.
+    The basic SMTP commands include:<br>
+
+        HELO: Used to introduce the client to the server<br>
+        MAIL FROM: Used to specify the sender's email address<br>
+        RCPT TO: Used to specify the recipient's email address<br>
+        DATA: Used to send the email message itself<br>
+        QUIT: Used to terminate the SMTP session<br>
+    </p>
+    <h4 style="color:aliceblue">
+        NNTP protocol</h4><p style="color:aliceblue">
+        NNTP (Network News Transfer Protocol) is a protocol used for distributing, reading, and posting news articles on the Internet.
+        It is used by news servers to communicate with each other and with news clients that allow users to read, and reply to articles. NNTP uses a simple text-based format for messages, and is typically transmitted over TCP port 119. 
+    </p>
+    <h4 style="color:aliceblue">
+    E-mail mailbox</h4><p style="color:aliceblue">
+        An email mailbox is a location on a mail server where an individual's email messages are stored. <br><br>
+        
+        An email mailbox on a POP server is typically a single file on the server's file system, while an email mailbox on an IMAP 
+        server is typically stored in a database.<br>
+        <br>
+        A mailbox can have several parameters like<br>
+            Size: The amount of disk space allocated for the mailbox.<br>
+            Quota: The maximum amount of disk space that can be used by the mailbox.<br>
+            Retention: The amount of time that email messages will be kept in the mailbox before they are deleted.<br>
+        An email alias is an alternate email address that is associated with a mailbox. <br>
+        <br>
+        An email address is a unique identifier that is used to deliver email messages to a specific mailbox. It typically consists of two parts:
+        the local-part, which is the name of the mailbox, and the domain, which is the name of the domain where the mailbox is located. For example,
+        in the email address "john@example.com", "john" is the local-part and "example.com" is the domain.
+    </p>
+    <h4 style="color:aliceblue">
+    E-mail structure: header</h4><p style="color:aliceblue">
+        An email message is made up of two main parts: the header and the body.<br>
+
+        The header is the section of the email that contains the meta-data of the message, such as the sender, recipient, subject, and date. It also contains routing information such as the message's ID and any other information used by the email servers to route the message. The header is separated from the body by a special separator called the "header separator".<br>
+        
+        The body is the section of the email that contains the actual content of the message, such as the text or attachments.
+    </p>
+    <h4 style="color:aliceblue">
+    Attachements, e-mail coding, MIME</h4><p style="color:aliceblue">
+        Email coding refers to the process of encoding the content of an email message so that it can be transmitted over the Internet.
+        This is necessary because emails can contain various types of data, such as text, images, and attachments, which need to be
+        converted into a format that can be understood by email servers and clients.<br>
+
+        MIME (Multipurpose Internet Mail Extensions) is the most common standard used for email coding. It allows emails to include
+        different types of data by specifying the type of data in the email header. <br>
+        
+        MIME also allows for email attachments. When it is added to an email, the file is encoded and packaged with the email in a format
+        specified by MIME, which includes information about the type of file, its size, and its name. When the email is received, the attachment is decoded and presented to the user as a separate file.<br>
+    </p>
+    <h4 style="color:aliceblue">
+    Mailing lists</h4><p style="color:aliceblue">
+        A mailing list is a group of email addresses used to send messages to multiple recipients at once.<br>
+
+        An email gate is a program or service that facilitates the operation of a mailing list. It is responsible for managing 
+        the membership of the list, handling incoming messages, and forwarding messages to the members of the list. There are 
+        different types of email gates, for exaple one that gives ability to subscribe and unsubscribe from the list.
+    </p>
+    <h4 style="color:aliceblue">
+    E-mail security, ssl, tls, PGP, signature</h4><p style="color:aliceblue">
+        Email security refers to the various measures that are used to protect the confidentiality,
+        integrity, and authenticity of email messages. There are a number of different security technologies
+        and protocols that can be used to secure email, including SSL, TLS, PGP, and email signatures.<br>
+
+        SSL (Secure Sockets Layer) and TLS (Transport Layer Security) are encryption protocols that are used 
+        to secure email transmissions between email servers. <br>
+        
+        PGP (Pretty Good Privacy) is a encryption method that can be used to encrypt email messages on a 
+        per-message basis. PGP uses a key-pair encryption.<br>
+        
+        Email signature is a way to include a digital signature in email. It contains the sender's public key and other information that can be used to 
+        verify the identity of the sender. A digital signature is created by encrypting a hash of the message 
+        with the sender's private key, and can be verified by decrypting the signature with the sender's public key.<br>
+    </p>
+    <h4 style="color:aliceblue">
+    Spam, blacklists, graylists, spam filtering,</h4><p style="color:aliceblue">
+        Email spam, also known as unsolicited bulk email (UBE), is unwanted email that is sent in large quantities
+        to a large number of recipients. Spam can be used for a variety of purposes, such as advertising, phishing, or spreading malware.<br>
+
+        Blacklists are lists of IP addresses or domain names that are known to be associated with spam. Mail servers 
+        can use blacklists to block incoming email from known spam sources.<br>
+        
+        Graylists are a way to temporarily block incoming email from a sender, in order to determine if the sender is 
+        legitimate. Graylisting works by temporarily rejecting an email from an unknown sender, and accepting it only 
+        after the sender retries to deliver the message, which is a behavior legitimate senders typically do.<br>
+        
+        Spam filtering is the process of automatically identifying and removing spam from incoming email. There are a
+        variety of techniques that can be used, including pattern matching, machine learning, blacklists and graylists.
+    </p>
+    <h2 style="color:aliceblue">Practical Part:</h2>
+    <h3 style="color:aliceblue">DNS system:</h3>
+    <h4 style="color:aliceblue">2.1.1.     Display DNS settings on your computer using Control Panel and ipconfig. Find google DNS server and change DNS settings on your computer to use this server.</h4>
+    <img src="2.1.1.1.png"><br>
+    <img src="2.1.1.2.png"><br>
+    <img src="2.1.1.3.png"><br>
+    <img src="2.1.1.4.png"><br>
+    <h4 style="color:aliceblue">2.1.2.     Using dig, host, nslookup find the following information:</h4>
+    <p style="color:aliceblue">Domain names and corresponding IP addresses of computers in lodz.pl domain:</p>
+    <img src="2.1.2.1.png"><br>
+    <p style="color:aliceblue"> A computer somewhere in Europe, outside Lodz and find all the available information about DNS settings of this computer:</p>
+    <img src="2.1.2.2.1.png"><br>
+    <img src="2.1.2.2.2.png"><br>
+    <p style="color:aliceblue">A computer somewhere outside Europe (eg. Exotic country) and find all the available information about DNS settings of this computer:</p>
+    <img src="2.1.2.3.1.png"><br>
+    <img src="2.1.2.3.2.png"><br>
+    <p style="color:aliceblue">Verify DNS assignment for localhost:</p>
+    <img src="2.1.2.4.png"><br>
+    <p style="color:aliceblue">Flush dns memory on your computer using ipconfig:</p>
+    <img src="2.1.2.5.png"><br>
+    <p style="color:aliceblue">Change the file hosts in such a way that when you enter ifeXX.com the website msn.com will display:</p>
+    <p style="color:aliceblue">Firstly we need to find hosts file, which is located in C:/Windows/System32/drivers/etc</p>
+    <img src="2.1.2.6.1.png"><br>
+    <img src="2.1.6.2.png"><br>
+    <h3 style="color:aliceblue">Mail system:</h3>
+    <h4 style="color:aliceblue">2.2.1.     Configure Thunderbird to send and receive e-mails from studife.it.p.lodz.pl</h4>
+    <img src="2.2.1.png"><br>
+    <h4 style="color:aliceblue">2.2.2.     Send an e-mail to:</h4>
+    <p style="color:aliceblue">non-existent mail server</p>
+    <img src="2.2.2.1.png"><br>
+    <p style="color:aliceblue">non-existent user on an existent e-mail server</p>
+    <img src="2.2.2.2.png"><br>
+    <p style="color:aliceblue"> a server which is not an e-mail server</p>
+    <img src="2.2.2.3.png"><br>
+    <h4 style="color:aliceblue">2.2.3.     Using Wireshark analyse the process of sending and receiving e-mails from Thunderbird:</h4>
+    <img src="2.2.3.png"><br>
+    <h4 style="color:aliceblue">2.2.4.     Send and receive an e-mail connecting to a smtp and pop3 server using telnet:</h4>
+    <img src="2.2.4.png"><br>
+</body>
+</html>

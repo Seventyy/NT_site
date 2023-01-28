@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 4</title>
+</head>
+<body style="background-color:darkslategrey">
+
+    <h2 style="color:aliceblue">Theoretical Part:</h2>
+
+    <h3 style="color:aliceblue">TCP protocol</h3>
+    <p style="color:aliceblue">
+        Transmission Control Protocol is a protocol from transport layer. It ensures that no segments will be lost, altered, or received in incorrect order. 
+        It is connection-oriented, meaning a connection between client and server has to be established before any data is being sent. It is used wherever data integrity
+        is vital like login information, banking data, file transfer and so on.
+    </p>
+    
+    <h3 style="color:aliceblue">UDP protocol</h3>
+    <p style="color:aliceblue">
+        User Datagram Protocol is a protocol from transport layer. It does not require a connection to be established before sending data.
+        It provides checksums for data integrity but does not ensure that the datagrams are delivered in correct order, or at all. As a result, it is faster
+        then TCP and better suited for music and video streaming, multiplayer games data and so on.
+    </p>
+    
+    <h3 style="color:aliceblue">TCP protocol parameters</h3>
+    <p style="color:aliceblue">
+        bind - the ip address to which the client is trying to connect<br>
+        connecttimeout - specifies how long the client waits for server to respond<br>
+        dropworking - determines if connection can be stopped due to a timeout or a ping failure<br>
+        idletimeout - specifies time that connection can remain idle<br>
+        pingfrequency - specifies frequency of pings checking if the app is still active<br>
+        port - specifies the port number on which the host listens for incoming client requests. <br><br>
+
+        In TCP header there exists information about: source port, destination port, sequence number, acknowledgment number, 
+        flag bits, checksum, padding, data among other
+    </p>
+    
+    <h3 style="color:aliceblue">UDP protocol parameters</h3>
+    <p style="color:aliceblue">
+        In UDP header there exists information about: source port, destination port length and checksum (for error correction)
+    </p>
+    
+    <h3 style="color:aliceblue">TCP connection</h3>
+    <p style="color:aliceblue">
+        Connection has to be established before sending data. It requires the below-mentioned three-way handshake.
+    </p>
+    
+    <h3 style="color:aliceblue">three-way handshake</h3>
+    <p style="color:aliceblue">
+        Creating TCP connection requires a three-way handshake. First client sends a package with SYN flag and random sequence number 
+        (for simplicity, let's assume 0). Then the server will send back two packages. One with ACK flag set to 1, because this is the next sequence number
+        server is expecting. Second is a package with SYN flag and random sequence number as the client (also assume 0). Now the client sends 
+        acknowledgment again, with value of sequence equal 1.
+    </p>
+    
+    <h3 style="color:aliceblue">connection establishment</h3>
+    <p style="color:aliceblue">
+        Connection is established after the three-way handshake explained above. Now both server and client can send packages to each other freely. <br>
+        UDP does not require a connection to be established. 
+    </p>
+    
+    <h3 style="color:aliceblue">connection release</h3>
+    <p style="color:aliceblue">
+        Connection release is similar to its establishment. FIN flag is sent by client or server (let's assume server), with appropriate sequence number.
+        Client sends ACK flag with sequence number one higher than server sent. Then client sends its FIN and server acknowledges it.
+    </p>
+    
+    <h3 style="color:aliceblue">ports</h3>
+    <p style="color:aliceblue">
+        Many TCP/UDP connections can be active at a given time. Different ports are used to differentiate them.
+    </p>
+
+    <h2 style="color:aliceblue">Practical Part:</h2>
+
+    <p style="color:aliceblue">
+        Using wireshark we can sort all protocols to find the TCP protocol and the IPs of the destination (13.107.22.200, 13.107.19.254 and 204.79.197.254).  Using the netstat command, we can find all connected ports from before and after closing www.google.com     
+    </p>
+
+    <img src="3.1.1.png"><br>
+    <img src="3.1.2.png"><br>
+    <img src="3.1.3.png"><br>
+    <img src="3.1.4.png"><br>
+    <p style="color:aliceblue">
+        To copy the file, we need first to connect to the server using ftp studife.it.p.lodz.pl command and by providing our login and password. After that, to upload the file we use: put file_location command. Using wireshark and netstat we can see what ports were used.
+    </p>
+    <img src="3.2.1.png"><br>
+    <img src="3.2.2.png"><br>
+    <img src="3.2.3.png"><br>
+    <img src="3.2.4.png"><br>
+    <img src="3.2.5.png"><br>
+    <p style="color:aliceblue">
+        To copy a file using sftp first we connenct to the server using sftp ife22_39@studife.it.p.lodz.pl and by providing our password. After that we can use the same command like in the previous exercise.  Using wireshark and netstat we can see what ports were used.
+    </p>
+    <img src="3.3.1.png"><br>
+    <img src="3.3.2.png"><br>
+    <img src="3.3.3.png"><br>
+    <img src="3.3.4.png"><br>
+    <img src="3.3.5.png"><br>
+    <img src="3.3.6.png"><br>
+    
+    <p style="color:aliceblue">
+        The DNS uses TCP Port 53 for zone transfers, for maintaining coherence between the DNS database and the server.
+    </p>
+    
+
+</body>
+</html>
+
